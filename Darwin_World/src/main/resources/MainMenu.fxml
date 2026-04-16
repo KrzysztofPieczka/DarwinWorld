@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            minHeight="600" minWidth="900"
+            fx:controller="agh.ics.oop.presenter.MenuPresenter"
+            stylesheets="@styles.css">
+
+    <center>
+        <StackPane>
+            <ImageView fitHeight="600" fitWidth="900">
+                <Image url="@MainMenu.png"  />
+            </ImageView>
+
+            <VBox spacing="20" alignment="CENTER">
+                <Label style="-fx-font-size: 250; -fx-background-color: transparent; -fx-border-color: transparent;" />
+                <Button text="Create New World" onAction="#onCreateNewWorldClick" styleClass="button"/>
+                <Button text="Load World" onAction="#onLoadWorldClick" styleClass="button"/>
+                <Button text="Quit" onAction="#onQuitClick" styleClass="button"/>
+            </VBox>
+            <Label text="Alpha v1.16.10" style="-fx-text-fill: #e6b26b; -fx-font-size: 16px;"
+                   StackPane.alignment="BOTTOM_LEFT" />
+            <Button text="Credits" StackPane.alignment="BOTTOM_RIGHT" onAction="#onCreditsClick" styleClass="button"/>
+        </StackPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            minHeight="600" minWidth="900"
+            fx:controller="agh.ics.oop.presenter.NewWorldPresenter"
+            stylesheets="@styles.css">
+
+    <center>
+        <StackPane>
+            <ImageView fitHeight="600" fitWidth="900">
+                <Image url="@MainMenu.png"  />
+            </ImageView>
+            <VBox spacing="20" alignment="CENTER">
+                <GridPane hgap="20" vgap="10" alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" prefWidth="200"/>
+                        <ColumnConstraints halignment="LEFT" prefWidth="200"/>
+                        <ColumnConstraints halignment="RIGHT" prefWidth="200"/>
+                        <ColumnConstraints halignment="LEFT" prefWidth="200"/>
+                    </columnConstraints>
+
+                    <Label text="Map Width:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <TextField fx:id="mapWidthField" promptText="Width" GridPane.rowIndex="0" GridPane.columnIndex="1">
+                        <prefWidth>150</prefWidth>
+                    </TextField>
+
+                    <Label text="Map Height:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <TextField fx:id="mapHeightField" promptText="Height" GridPane.rowIndex="1" GridPane.columnIndex="1">
+                        <prefWidth>150</prefWidth>
+                    </TextField>
+
+                    <Label text="Initial Plant Count:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <TextField fx:id="initialPlantCountField" promptText="Count" GridPane.rowIndex="2" GridPane.columnIndex="1">
+                        <prefWidth>150</prefWidth>
+                    </TextField>
+
+                    <Label text="Plant Energy:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                    <TextField fx:id="plantEnergyField" promptText="Energy" GridPane.rowIndex="3" GridPane.columnIndex="1">
+                        <prefWidth>150</prefWidth>
+                    </TextField>
+
+                    <Label text="Daily Plant Growth:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                    <TextField fx:id="dailyPlantGrowthField" promptText="Growth" GridPane.rowIndex="0" GridPane.columnIndex="3">
+                        <prefWidth>150</prefWidth>
+                    </TextField>
+
+                    <Label text="Initial Animal Count:" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                    <TextField fx:id="initialAnimalCountField" promptText="Count" GridPane.rowIndex="1" GridPane.columnIndex="3">
+                        <prefWidth>150</prefWidth>
+                    </TextField>
+
+                    <Label text="Initial Animal Energy:" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+                    <TextField fx:id="initialAnimalEnergyField" promptText="Energy" GridPane.rowIndex="2" GridPane.columnIndex="3">
+                        <prefWidth>150</prefWidth>
+                    </TextField>
+
+                    <Label text="Energy for Reproduction:" GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+                    <TextField fx:id="reproductionEnergyField" promptText="Energy" GridPane.rowIndex="3" GridPane.columnIndex="3">
+                        <prefWidth>150</prefWidth>
+                    </TextField>
+
+                    <Label text="Energy Used for Offspring:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                    <TextField fx:id="offspringEnergyField" promptText="Energy" GridPane.rowIndex="4" GridPane.columnIndex="1">
+                        <prefWidth>150</prefWidth>
+                    </TextField>
+
+                    <Label text="Genome Length:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                    <TextField fx:id="genomeLengthField" promptText="Length" GridPane.rowIndex="5" GridPane.columnIndex="1">
+                        <prefWidth>150</prefWidth>
+                    </TextField>
+
+                    <Label text="Animal Behavior:" GridPane.rowIndex="4" GridPane.columnIndex="2"/>
+                    <ComboBox fx:id="animalBehaviorBox" GridPane.rowIndex="4" GridPane.columnIndex="3">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Randomness"/>
+                                <String fx:value="Once a man, twice a child"/>
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+
+                    <Label text="Map Variant:" GridPane.rowIndex="5" GridPane.columnIndex="2"/>
+                    <ComboBox fx:id="mapVariantBox" GridPane.rowIndex="5" GridPane.columnIndex="3">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Spherical World"/>
+                                <String fx:value="Ebb and flow"/>
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                </GridPane>
+                <GridPane hgap="10" alignment="CENTER">
+                    <Label text="Save this configuration?" GridPane.columnIndex="0"/>
+                    <TextField fx:id="configurationNameField" promptText="Enter the name" GridPane.columnIndex="1">
+                        <prefWidth>150</prefWidth>
+                    </TextField>
+                    <Button text="Save" onAction="#onSaveClick" styleClass="button" GridPane.columnIndex="2"/>
+                    <CheckBox fx:id="saveToFileCheckBox" text="Save data to file" GridPane.columnIndex="3"/>
+                </GridPane>
+                <!-- Przycisk Start -->
+                <Button text="Start Simulation" onAction="#onStartClick" styleClass="button"/>
+
+                <!-- Przycisk Powrót -->
+                <Button fx:id="backButton" text="Back to Menu" onAction="#onBackToMenuClick" styleClass="button"/>
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>

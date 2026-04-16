@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            minHeight="600" minWidth="900"
+            fx:controller="agh.ics.oop.presenter.CreditsPresenter"
+            stylesheets="@styles.css">
+
+    <center>
+        <StackPane>
+            <ImageView fitHeight="600" fitWidth="900">
+                <Image url="@MainMenu.png"  />
+            </ImageView>
+
+            <VBox alignment="CENTER">
+                <Label text="Created by:" style="-fx-font-size: 30px"/>
+                <Label text="Zuzanna Jedynak" style="-fx-font-size: 30px"/>
+                <Label text="Krzysztof Pieczka" style="-fx-font-size: 30px"/>
+                <Label style="-fx-font-size: 30; -fx-background-color: transparent; -fx-border-color: transparent;" />
+                <Button fx:id="backButton" text="Back to Menu" onAction="#onBackToMenuClick" styleClass="button"/>
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>
