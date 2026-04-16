@@ -2,7 +2,7 @@
 
 This is a simple object-oriented game project created for the *Object-Oriented Design* course at the **Faculty of Computer Science**, **AGH University of Science and Technology**.
 
-## 🎮 About the Project
+## About the Project
 
 The simulation features a population of monkeys living in a virtual world. Monkeys can:
 
@@ -13,17 +13,17 @@ The simulation features a population of monkeys living in a virtual world. Monke
 
 The project is written in **Java** and focuses on object-oriented programming concepts, including encapsulation, inheritance, polymorphism, and threads.
 
-## 📚 Technologies Used
+## Technologies Used
 
 - Java
 - Object-oriented programming principles
 
-## 🧠 Authors
+## Authors
 
 This project was developed as part of coursework at AGH University by two students:  
 **Krzysztof Pieczka and Zuzanna Jedynak!**
 
-## 📸 Screenshots
+## Screenshots
 
 ### Main Menu
 ![Main Menu](assets/menuscreenshot.jpg)
@@ -31,7 +31,7 @@ This project was developed as part of coursework at AGH University by two studen
 ### In-Game View
 ![Game View](assets/gamescreenshot.jpg)
 
-## 📦 How to Run the Application
+## How to Run the Application
 
 1. Make sure you have **JDK 17+** installed  
    *(and JavaFX if required – [download here](https://openjfx.io/))*
